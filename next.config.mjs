@@ -7,6 +7,8 @@ const nextConfig = {
     mdxRs: true,
   },
   output: "export",
+	cleanDistDir: true,
+	distDir: "OUTPUT",
   // reactStrictMode: true,
   // // Add basePath
   // basePath: "/ITKS",
