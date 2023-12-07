@@ -8,7 +8,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   // Add basePath
-  basePath: "/github-pages",
+  basePath: "/ITKS",
 };
 
 export default withContentlayer(nextConfig);
