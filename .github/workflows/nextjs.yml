@@ -67,10 +67,11 @@ jobs:
         run: pnpm build
       # - name: Static HTML export with Next.js
       #   run: pnpm next export
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: /out
+          path: out/
 
   # Deployment job
   deploy:
