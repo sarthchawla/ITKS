@@ -6,12 +6,6 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
-  output: "export",
-	cleanDistDir: true,
-	distDir: "OUTPUT",
-  // reactStrictMode: true,
-  // // Add basePath
-  // basePath: "/ITKS",
 };
 
 export default withContentlayer(nextConfig);
