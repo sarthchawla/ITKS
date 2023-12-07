@@ -5,18 +5,18 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "itks.com",
+    template: "%s | itks.com",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Interior, Architecture design Interior and Contracting Project Management",
   openGraph: {
-    title: "chronark.com",
-    description: "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: "itks.com",
+    description: "Interior, Architecture design Interior and Contracting Project Management",
+    url: "https://itks.com",
+    siteName: "itks.com",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://itks.com/favicon.png",
         width: 1920,
         height: 1080,
       },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "itks",
     card: "summary_large_image",
   },
   icons: {
