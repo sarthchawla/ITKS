@@ -25,7 +25,7 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
       />
-      <h1 className="z-10 text-xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-3xl md:text-6xl whitespace-nowrap bg-clip-text ">
+      <h1 className="z-10 text-xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-xl md:text-6xl whitespace-nowrap bg-clip-text ">
         Infinity Turnkey Solutions
       </h1>
 

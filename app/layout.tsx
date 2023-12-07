@@ -5,18 +5,18 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "itks.com",
-    template: "%s | itks.com",
+    default: "itks.in",
+    template: "%s | itks.in",
   },
   description: "Interior, Architecture design Interior and Contracting Project Management",
   openGraph: {
-    title: "itks.com",
+    title: "itks.in",
     description: "Interior, Architecture design Interior and Contracting Project Management",
-    url: "https://itks.com",
-    siteName: "itks.com",
+    url: "https://itks.in",
+    siteName: "itks.in",
     images: [
       {
-        url: "https://itks.com/favicon.png",
+        url: "https://itks.in/favicon.png",
         width: 1920,
         height: 1080,
       },
