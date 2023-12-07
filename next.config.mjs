@@ -6,6 +6,7 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  output: "export",
   // reactStrictMode: true,
   // // Add basePath
   // basePath: "/ITKS",
