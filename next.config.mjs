@@ -6,6 +6,8 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+	output: "export",
+	outputFileTracing: true,
 };
 
 export default withContentlayer(nextConfig);
