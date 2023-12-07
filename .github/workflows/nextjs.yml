@@ -67,6 +67,8 @@ jobs:
         run: pnpm build
         with:
           artifact-directory: build
+      - name: Print directory listing
+        run: ls -l
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
