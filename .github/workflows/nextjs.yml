@@ -65,8 +65,9 @@ jobs:
         run: pnpm install
       - name: Build with Next.js
         run: pnpm build
-      # - name: Static HTML export with Next.js
-      #   run: pnpm next export
+
+      - name: Static HTML export with Next.js
+        run: pnpm next export
 
       - name: Print directory structure
         # You may pin to the exact commit or the version.
