@@ -6,9 +6,9 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
-  // reactStrictMode: true,
-  // // Add basePath
-  // basePath: "/ITKS",
+  reactStrictMode: true,
+  // Add basePath
+  basePath: "/ITKS",
 };
 
 export default withContentlayer(nextConfig);
