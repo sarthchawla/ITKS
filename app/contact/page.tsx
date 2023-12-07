@@ -1,27 +1,27 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Chrome, Mail, PhoneCall } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
 const socials = [
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/chronark_",
-		label: "Twitter",
-		handle: "@chronark_",
+		icon: <PhoneCall size={20} />,
+		href: "tel:+91-9999-207-909",
+		label: "Phone number",
+		handle: "+91-9999-207-909",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:dev@chronark.com",
+		href: "mailto:info@itks.in",
 		label: "Email",
-		handle: "dev@chronark.com",
+		handle: "info@itks.in",
 	},
 	{
-		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
-		label: "Github",
-		handle: "chronark",
+		icon: <Chrome size={20} />,
+		href: "https://www.itks.in",
+		label: "Website",
+		handle: "www.itks.in",
 	},
 ];
 
