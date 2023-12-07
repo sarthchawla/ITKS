@@ -68,7 +68,7 @@ jobs:
       - name: Print directory listing
         run: ls -l
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
           path: out
 
