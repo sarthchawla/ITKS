@@ -65,10 +65,6 @@ jobs:
         run: pnpm install
       - name: Build with Next.js
         run: pnpm build
-
-      - name: Static HTML export with Next.js
-        run: pnpm next export
-
       - name: Print directory structure
         # You may pin to the exact commit or the version.
         # uses: FiorelaCiroku/XDTesting-Print-Directory-Structure@553df9b35280b89f01b0f3e4d93d9171095a55d4
@@ -77,7 +73,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ../out
+          path: /out/
 
   # Deployment job
   deploy:
