@@ -8,11 +8,11 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white/95 to-gray-50 dark:from-black dark:via-zinc-900/95 dark:to-black z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white/90 to-indigo-50/30 dark:from-black dark:via-zinc-900/95 dark:to-black z-10" />
         <img
           src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1920&q=80"
           alt="Modern Interior Design"
-          className="w-full h-full object-cover opacity-20 dark:opacity-30"
+          className="w-full h-full object-cover opacity-30 dark:opacity-30"
         />
       </div>
 
