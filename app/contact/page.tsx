@@ -88,7 +88,7 @@ export default function ContactPage() {
       {/* Contact Info Cards */}
       <section className="py-20 px-6 bg-gray-50 dark:bg-zinc-900">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20 max-w-4xl mx-auto">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
@@ -96,32 +96,30 @@ export default function ContactPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card>
-                  <Link
-                    href={info.href}
-                    target={info.href.startsWith("http") ? "_blank" : "_self"}
-                    className="p-8 relative flex flex-col items-center gap-4 duration-700 group"
-                  >
-                    <span
-                      className="absolute w-px h-2/3 bg-gradient-to-b from-gray-400 via-gray-400/50 to-transparent dark:from-zinc-500 dark:via-zinc-500/50"
-                      aria-hidden="true"
-                    />
-                    <span className="relative z-10 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-gray-700 dark:text-zinc-200 group-hover:text-gray-900 dark:group-hover:text-white group-hover:bg-gray-100 dark:group-hover:bg-zinc-900 border-gray-300 dark:border-zinc-500 bg-gray-50 dark:bg-zinc-900 group-hover:border-gray-400 dark:group-hover:border-zinc-200">
+                <Link
+                  href={info.href}
+                  target={info.href.startsWith("http") ? "_blank" : "_self"}
+                  className="block bg-white dark:bg-zinc-800/50 border border-gray-200 dark:border-zinc-700 rounded-xl p-6 hover:shadow-lg dark:hover:shadow-none hover:border-gray-300 dark:hover:border-zinc-600 transition-all duration-300 group"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-zinc-900 text-gray-700 dark:text-zinc-300 group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-black transition-all duration-300">
                       {info.icon}
-                    </span>
-                    <div className="z-10 flex flex-col items-center">
-                      <span className="text-sm text-gray-500 dark:text-zinc-500 mb-2">{info.title}</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-sm font-medium text-gray-500 dark:text-zinc-500 mb-1">
+                        {info.title}
+                      </h3>
                       {info.details.map((detail, idx) => (
-                        <span
+                        <p
                           key={idx}
-                          className="text-lg font-medium duration-150 text-gray-700 dark:text-zinc-200 group-hover:text-gray-900 dark:group-hover:text-white text-center"
+                          className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-zinc-200 transition-colors truncate"
                         >
                           {detail}
-                        </span>
+                        </p>
                       ))}
                     </div>
-                  </Link>
-                </Card>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
