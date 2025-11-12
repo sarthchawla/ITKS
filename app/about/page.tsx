@@ -74,11 +74,11 @@ const milestones = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-white dark:bg-black min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-black to-zinc-900">
+      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-black dark:to-zinc-900">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -86,10 +86,10 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
               About Us
             </h1>
-            <p className="text-xl text-zinc-400 leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 leading-relaxed">
               Transforming visions into reality through innovative design, meticulous planning, and exceptional execution
             </p>
           </motion.div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 px-6 bg-zinc-900">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-zinc-900">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -106,10 +106,10 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 Our Story
               </h2>
-              <div className="space-y-4 text-zinc-400 leading-relaxed">
+              <div className="space-y-4 text-gray-600 dark:text-zinc-400 leading-relaxed">
                 <p>
                   Founded in 2009, Infinity Turnkey Solutions began with a simple yet powerful vision: to create spaces that inspire, function beautifully, and stand the test of time. What started as a small team of passionate designers has grown into a full-service design and construction firm.
                 </p>
@@ -141,7 +141,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-zinc-900 to-black">
+      <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-zinc-900 dark:to-black">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -150,10 +150,10 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Our Values
             </h2>
-            <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </motion.div>
@@ -166,13 +166,13 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-zinc-600 transition-colors"
+                className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-2xl p-8 hover:border-gray-300 dark:hover:border-zinc-600 transition-colors shadow-sm dark:shadow-none"
               >
-                <div className="w-14 h-14 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6">
-                  <value.icon className="w-7 h-7 text-white" />
+                <div className="w-14 h-14 rounded-xl bg-gray-100 dark:bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6">
+                  <value.icon className="w-7 h-7 text-gray-900 dark:text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">{value.title}</h3>
-                <p className="text-zinc-400 leading-relaxed">{value.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">{value.title}</h3>
+                <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 px-6 bg-black">
+      <section className="py-20 px-6 bg-white dark:bg-black">
         <div className="container mx-auto max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -189,17 +189,17 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Our Journey
             </h2>
-            <p className="text-xl text-zinc-400">
+            <p className="text-xl text-gray-600 dark:text-zinc-400">
               Key milestones in our growth story
             </p>
           </motion.div>
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-zinc-800" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-300 dark:bg-zinc-800" />
 
             {/* Timeline Items */}
             <div className="space-y-12">
@@ -215,14 +215,14 @@ export default function AboutPage() {
                   }`}
                 >
                   <div className={`flex-1 ${index % 2 === 0 ? "text-right" : "text-left"}`}>
-                    <div className="inline-block bg-zinc-900 border border-zinc-800 rounded-xl p-6">
-                      <div className="text-2xl font-bold text-white mb-2">{milestone.event}</div>
-                      <p className="text-zinc-400">{milestone.description}</p>
+                    <div className="inline-block bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl p-6 shadow-sm dark:shadow-none">
+                      <div className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{milestone.event}</div>
+                      <p className="text-gray-600 dark:text-zinc-400">{milestone.description}</p>
                     </div>
                   </div>
                   <div className="relative z-10">
-                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center border-4 border-black">
-                      <span className="text-black font-bold">{milestone.year}</span>
+                    <div className="w-16 h-16 rounded-full bg-gray-900 dark:bg-white flex items-center justify-center border-4 border-white dark:border-black">
+                      <span className="text-white dark:text-black font-bold">{milestone.year}</span>
                     </div>
                   </div>
                   <div className="flex-1" />
@@ -234,7 +234,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-black to-zinc-900">
+      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-black dark:to-zinc-900">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -243,10 +243,10 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Meet Our Team
             </h2>
-            <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 max-w-2xl mx-auto">
               The talented professionals behind our success
             </p>
           </motion.div>
@@ -267,11 +267,11 @@ export default function AboutPage() {
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent dark:from-black dark:via-black/50 opacity-60" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-zinc-400 text-sm mb-2">{member.role}</p>
-                <p className="text-zinc-500 text-sm">{member.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{member.name}</h3>
+                <p className="text-gray-600 dark:text-zinc-400 text-sm mb-2">{member.role}</p>
+                <p className="text-gray-500 dark:text-zinc-500 text-sm">{member.description}</p>
               </motion.div>
             ))}
           </div>
@@ -279,7 +279,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-zinc-900">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-zinc-900">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -288,15 +288,15 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Let's Work Together
             </h2>
-            <p className="text-xl text-zinc-400 mb-8">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 mb-8">
               Ready to start your next project? We'd love to hear from you
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-zinc-200 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-zinc-200 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Get In Touch
             </a>

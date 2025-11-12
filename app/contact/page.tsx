@@ -63,11 +63,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-white dark:bg-black min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-black to-zinc-900">
+      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-black dark:to-zinc-900">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -75,10 +75,10 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
               Get In Touch
             </h1>
-            <p className="text-xl text-zinc-400 leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 leading-relaxed">
               Have a project in mind? We'd love to hear from you. Let's discuss how we can bring your vision to life.
             </p>
           </motion.div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-20 px-6 bg-zinc-900">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-zinc-900">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {contactInfo.map((info, index) => (
@@ -103,18 +103,18 @@ export default function ContactPage() {
                     className="p-8 relative flex flex-col items-center gap-4 duration-700 group"
                   >
                     <span
-                      className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
+                      className="absolute w-px h-2/3 bg-gradient-to-b from-gray-400 via-gray-400/50 to-transparent dark:from-zinc-500 dark:via-zinc-500/50"
                       aria-hidden="true"
                     />
-                    <span className="relative z-10 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200">
+                    <span className="relative z-10 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-gray-700 dark:text-zinc-200 group-hover:text-gray-900 dark:group-hover:text-white group-hover:bg-gray-100 dark:group-hover:bg-zinc-900 border-gray-300 dark:border-zinc-500 bg-gray-50 dark:bg-zinc-900 group-hover:border-gray-400 dark:group-hover:border-zinc-200">
                       {info.icon}
                     </span>
                     <div className="z-10 flex flex-col items-center">
-                      <span className="text-sm text-zinc-500 mb-2">{info.title}</span>
+                      <span className="text-sm text-gray-500 dark:text-zinc-500 mb-2">{info.title}</span>
                       {info.details.map((detail, idx) => (
                         <span
                           key={idx}
-                          className="text-lg font-medium duration-150 text-zinc-200 group-hover:text-white text-center"
+                          className="text-lg font-medium duration-150 text-gray-700 dark:text-zinc-200 group-hover:text-gray-900 dark:group-hover:text-white text-center"
                         >
                           {detail}
                         </span>
@@ -135,12 +135,12 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="lg:col-span-2"
             >
-              <div className="bg-zinc-800/50 border border-zinc-700 rounded-2xl p-8">
-                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+              <div className="bg-white dark:bg-zinc-800/50 border border-gray-200 dark:border-zinc-700 rounded-2xl p-8 shadow-sm dark:shadow-none">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-zinc-300 mb-2 font-medium">
+                      <label htmlFor="name" className="block text-gray-700 dark:text-zinc-300 mb-2 font-medium">
                         Your Name *
                       </label>
                       <input
@@ -150,12 +150,12 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
+                        className="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-gray-500 dark:focus:border-zinc-500 transition-colors"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-zinc-300 mb-2 font-medium">
+                      <label htmlFor="email" className="block text-gray-700 dark:text-zinc-300 mb-2 font-medium">
                         Email Address *
                       </label>
                       <input
@@ -165,7 +165,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
+                        className="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-gray-500 dark:focus:border-zinc-500 transition-colors"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-zinc-300 mb-2 font-medium">
+                      <label htmlFor="phone" className="block text-gray-700 dark:text-zinc-300 mb-2 font-medium">
                         Phone Number
                       </label>
                       <input
@@ -182,12 +182,12 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
+                        className="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-gray-500 dark:focus:border-zinc-500 transition-colors"
                         placeholder="+91 1234567890"
                       />
                     </div>
                     <div>
-                      <label htmlFor="subject" className="block text-zinc-300 mb-2 font-medium">
+                      <label htmlFor="subject" className="block text-gray-700 dark:text-zinc-300 mb-2 font-medium">
                         Subject *
                       </label>
                       <select
@@ -196,7 +196,7 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors"
+                        className="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-gray-500 dark:focus:border-zinc-500 transition-colors"
                       >
                         <option value="">Select a subject</option>
                         <option value="interior-design">Interior Design</option>
@@ -210,7 +210,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-zinc-300 mb-2 font-medium">
+                    <label htmlFor="message" className="block text-gray-700 dark:text-zinc-300 mb-2 font-medium">
                       Your Message *
                     </label>
                     <textarea
@@ -220,14 +220,14 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-zinc-500 transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-gray-500 dark:focus:border-zinc-500 transition-colors resize-none"
                       placeholder="Tell us about your project..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full md:w-auto px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-zinc-200 transition-all duration-300 flex items-center justify-center gap-2 group"
+                    className="w-full md:w-auto px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-zinc-200 transition-all duration-300 flex items-center justify-center gap-2 group"
                   >
                     Send Message
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -243,29 +243,29 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="space-y-6"
             >
-              <div className="bg-zinc-800/50 border border-zinc-700 rounded-2xl p-8">
+              <div className="bg-white dark:bg-zinc-800/50 border border-gray-200 dark:border-zinc-700 rounded-2xl p-8 shadow-sm dark:shadow-none">
                 <div className="flex items-center gap-3 mb-6">
-                  <Clock className="w-6 h-6 text-white" />
-                  <h3 className="text-2xl font-bold text-white">Working Hours</h3>
+                  <Clock className="w-6 h-6 text-gray-900 dark:text-white" />
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Working Hours</h3>
                 </div>
                 <div className="space-y-4">
                   {workingHours.map((schedule, index) => (
-                    <div key={index} className="flex justify-between items-center py-3 border-b border-zinc-700 last:border-0">
-                      <span className="text-zinc-300 font-medium">{schedule.day}</span>
-                      <span className="text-zinc-400">{schedule.hours}</span>
+                    <div key={index} className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-zinc-700 last:border-0">
+                      <span className="text-gray-700 dark:text-zinc-300 font-medium">{schedule.day}</span>
+                      <span className="text-gray-600 dark:text-zinc-400">{schedule.hours}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-zinc-800/50 border border-zinc-700 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Quick Response</h3>
-                <p className="text-zinc-400 leading-relaxed mb-4">
+              <div className="bg-white dark:bg-zinc-800/50 border border-gray-200 dark:border-zinc-700 rounded-2xl p-8 shadow-sm dark:shadow-none">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Quick Response</h3>
+                <p className="text-gray-600 dark:text-zinc-400 leading-relaxed mb-4">
                   We typically respond to all inquiries within 24 hours during business days.
                 </p>
-                <p className="text-zinc-400 leading-relaxed">
+                <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">
                   For urgent matters, please call us directly at{" "}
-                  <a href="tel:+91-9999-207-909" className="text-white hover:text-zinc-300 transition-colors">
+                  <a href="tel:+91-9999-207-909" className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-zinc-300 transition-colors">
                     +91-9999-207-909
                   </a>
                 </p>
@@ -276,7 +276,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section (Placeholder) */}
-      <section className="py-20 px-6 bg-gradient-to-b from-zinc-900 to-black">
+      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-zinc-900 dark:to-black">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -284,11 +284,11 @@ export default function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-zinc-800/50 border border-zinc-700 rounded-2xl overflow-hidden h-96 flex items-center justify-center">
+            <div className="bg-white dark:bg-zinc-800/50 border border-gray-200 dark:border-zinc-700 rounded-2xl overflow-hidden h-96 flex items-center justify-center shadow-sm dark:shadow-none">
               <div className="text-center">
-                <MapPin className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
-                <p className="text-zinc-500 text-lg">Map integration placeholder</p>
-                <p className="text-zinc-600 text-sm mt-2">Add your Google Maps embed or location details here</p>
+                <MapPin className="w-16 h-16 text-gray-400 dark:text-zinc-600 mx-auto mb-4" />
+                <p className="text-gray-600 dark:text-zinc-500 text-lg">Map integration placeholder</p>
+                <p className="text-gray-500 dark:text-zinc-600 text-sm mt-2">Add your Google Maps embed or location details here</p>
               </div>
             </div>
           </motion.div>
@@ -296,7 +296,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-black">
+      <section className="py-20 px-6 bg-white dark:bg-black">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -305,16 +305,16 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Visit Our Office
             </h2>
-            <p className="text-xl text-zinc-400 mb-8">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 mb-8">
               Schedule a consultation at our office to discuss your project in detail
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/projects"
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-all duration-300"
+                className="px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white font-semibold rounded-lg hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
               >
                 View Our Work
               </a>

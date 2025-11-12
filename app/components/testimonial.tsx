@@ -23,21 +23,21 @@ export const Testimonial = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay }}
-      className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 relative"
+      className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-2xl p-8 relative shadow-sm dark:shadow-none"
     >
-      <Quote className="w-10 h-10 text-zinc-700 mb-4" />
-      <p className="text-zinc-300 text-lg leading-relaxed mb-6 italic">
+      <Quote className="w-10 h-10 text-gray-400 dark:text-zinc-700 mb-4" />
+      <p className="text-gray-700 dark:text-zinc-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
       </p>
       <div className="flex items-center gap-4">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-zinc-700 to-zinc-800 flex items-center justify-center">
-          <span className="text-white font-bold text-lg">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 dark:from-zinc-700 dark:to-zinc-800 flex items-center justify-center">
+          <span className="text-gray-900 dark:text-white font-bold text-lg">
             {author.charAt(0)}
           </span>
         </div>
         <div>
-          <p className="text-white font-semibold">{author}</p>
-          <p className="text-zinc-500 text-sm">
+          <p className="text-gray-900 dark:text-white font-semibold">{author}</p>
+          <p className="text-gray-600 dark:text-zinc-500 text-sm">
             {role} at {company}
           </p>
         </div>

@@ -100,11 +100,11 @@ const process = [
 
 export default function ServicesPage() {
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-white dark:bg-black min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-black to-zinc-900">
+      <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-black dark:to-zinc-900">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -112,10 +112,10 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
               Our Services
             </h1>
-            <p className="text-xl text-zinc-400 leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 leading-relaxed">
               Comprehensive design and construction solutions tailored to bring your vision to life with precision and creativity
             </p>
           </motion.div>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Detail Section */}
-      <section className="py-20 px-6 bg-zinc-900">
+      <section className="py-20 px-6 bg-gray-50 dark:bg-zinc-900">
         <div className="container mx-auto max-w-6xl space-y-32">
           {services.map((service, index) => (
             <motion.div
@@ -137,20 +137,20 @@ export default function ServicesPage() {
               }`}
             >
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-2xl bg-gray-100 dark:bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-gray-900 dark:text-white" />
                 </div>
-                <h2 className="text-4xl font-bold text-white mb-4">
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                   {service.title}
                 </h2>
-                <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+                <p className="text-gray-600 dark:text-zinc-400 text-lg leading-relaxed mb-8">
                   {service.description}
                 </p>
                 <div className="space-y-3">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-zinc-300">{feature}</span>
+                      <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-zinc-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -170,7 +170,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-zinc-900 to-black">
+      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-zinc-900 dark:to-black">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -179,10 +179,10 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Our Process
             </h2>
-            <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 max-w-2xl mx-auto">
               A streamlined approach to ensure your project's success from concept to completion
             </p>
           </motion.div>
@@ -198,14 +198,14 @@ export default function ServicesPage() {
                 className="relative"
               >
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border-2 border-white/20">
-                    <span className="text-2xl font-bold text-white">{item.step}</span>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100 dark:bg-white/10 backdrop-blur-sm flex items-center justify-center border-2 border-gray-300 dark:border-white/20">
+                    <span className="text-2xl font-bold text-gray-900 dark:text-white">{item.step}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-zinc-400 text-sm">{item.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-600 dark:text-zinc-400 text-sm">{item.description}</p>
                 </div>
                 {index < process.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-white/20 to-transparent" />
+                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-gray-300/20 dark:from-white/20 to-transparent" />
                 )}
               </motion.div>
             ))}
@@ -214,7 +214,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-black">
+      <section className="py-20 px-6 bg-white dark:bg-black">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -223,15 +223,15 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Let's Start Your Project
             </h2>
-            <p className="text-xl text-zinc-400 mb-8">
+            <p className="text-xl text-gray-600 dark:text-zinc-400 mb-8">
               Ready to transform your space? Get in touch with us today for a consultation
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-zinc-200 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-zinc-200 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Contact Us
             </a>

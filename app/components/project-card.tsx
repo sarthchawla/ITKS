@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
@@ -30,7 +29,7 @@ export const ProjectCard = ({
       />
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent dark:from-black dark:via-black/50 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
       
       {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -39,7 +38,7 @@ export const ProjectCard = ({
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: delay + 0.2 }}
         >
-          <p className="text-sm text-zinc-300 mb-2 uppercase tracking-wider">
+          <p className="text-sm text-gray-200 dark:text-zinc-300 mb-2 uppercase tracking-wider">
             {category}
           </p>
           <h3 className="text-2xl font-bold mb-2">{title}</h3>

@@ -2,6 +2,7 @@ import "../global.css";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
+import { ThemeProvider } from "./context/theme-context";
 
 export const metadata: Metadata = {
   title: {
@@ -59,13 +60,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" className={[inter.variable, calSans.variable].join(" ")} suppressHydrationWarning>
       <body
-        className={`bg-black ${
+        className={`bg-white dark:bg-black transition-colors duration-300 ${
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
         }`}
       >
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
